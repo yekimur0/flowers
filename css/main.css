@@ -1,0 +1,346 @@
+/* ==========================================================================
+   FLEUR — main.css
+   Точка входа: переменные, ресет, типографика, утилиты + импорт блоков.
+   ========================================================================== */
+
+@import url("components/header.css");
+@import url("components/hero.css");
+@import url("components/gallery.css");
+@import url("components/products.css");
+@import url("components/reviews.css");
+@import url("components/subscription.css");
+@import url("components/categories.css");
+@import url("components/info.css");
+@import url("components/contacts.css");
+@import url("components/blog.css");
+@import url("components/footer.css");
+@import url("components/catalog.css");
+@import url("components/faq.css");
+@import url("components/about.css");
+@import url("components/product.css");
+@import url("components/cart.css");
+@import url("components/favorites.css");
+@import url("components/article.css");
+@import url("components/policy.css");
+@import url("components/state.css");
+
+/* ---------- Переменные ---------- */
+:root {
+  /* Цвета */
+  --color-bg: #faf7f2;
+  --color-bg-soft: #f4efe6;
+  --color-surface: #ffffff;
+  --color-text: #2e2b23;
+  --color-text-muted: #756f60;
+  --color-border: #e8e1d3;
+
+  --color-green: #7c9070;
+  --color-green-dark: #64775a;
+  --color-green-soft: #dfe6da;
+
+  --color-accent: #c88a52;
+  --color-accent-soft: #f0d9be;
+  --color-star: #e8a96b;
+
+  --color-pink-soft: #f3e2dd;
+
+  /* Типографика */
+  --font-heading: "Playfair Display", "Georgia", serif;
+  --font-body: "Inter", "Segoe UI", Arial, sans-serif;
+
+  /* Слои/тени/радиусы */
+  --radius-s: 8px;
+  --radius-m: 14px;
+  --radius-l: 22px;
+  --radius-pill: 999px;
+  --shadow-card: 0 10px 30px rgba(46, 43, 35, 0.06);
+
+  /* Контейнер */
+  --container-width: 1320px;
+  --gap: 24px;
+}
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+figure {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* ---------- Базовые стили ---------- */
+body {
+  overflow-x: hidden;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+h2 {
+  font-size: clamp(28px, 3vw, 40px);
+}
+
+h3 {
+  font-size: clamp(20px, 2vw, 24px);
+}
+
+/* ---------- Утилиты ---------- */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+.section {
+  padding-block: clamp(40px, 6vw, 80px);
+}
+
+.section__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: clamp(24px, 4vw, 40px);
+  flex-wrap: wrap;
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-accent);
+  font-weight: 600;
+  white-space: nowrap;
+  transition: gap 0.2s ease;
+}
+
+.link-arrow:hover {
+  gap: 12px;
+}
+
+.link-arrow svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 15px;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn--primary {
+  background: var(--color-green);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: var(--color-green-dark);
+}
+
+.btn--outline {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.btn--outline:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.btn--full {
+  width: 100%;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  flex-shrink: 0;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.icon-btn:hover {
+  background: var(--color-green);
+  border-color: var(--color-green);
+  color: #fff;
+}
+
+.icon-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.icon-btn.is-active {
+  background: var(--color-green);
+  border-color: var(--color-green);
+  color: #fff;
+}
+
+.badge-dot {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.badge-dot::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-green);
+}
+
+.badge-dot.is-out::before {
+  background: #c96b4a;
+}
+
+.stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-star);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.stars svg {
+  width: 14px;
+  height: 14px;
+}
+
+.stars__count {
+  color: var(--color-text-muted);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- Заглушки изображений ---------- */
+.ph {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--ph-c1, #ece5d9), var(--ph-c2, #dbe3d4));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(46, 43, 35, 0.28);
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.ph::after {
+  content: "";
+  width: 34%;
+  height: 34%;
+  max-width: 64px;
+  max-height: 64px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='rgba(46,43,35,0.32)' stroke-width='2'%3E%3Ccircle cx='32' cy='22' r='9'/%3E%3Ccircle cx='20' cy='32' r='9'/%3E%3Ccircle cx='44' cy='32' r='9'/%3E%3Ccircle cx='26' cy='44' r='9'/%3E%3Ccircle cx='38' cy='44' r='9'/%3E%3Cpath d='M32 44v14'/%3E%3Cpath d='M32 52c6-2 9-6 9-6'/%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+.ph--1 {
+  --ph-c1: #efe6d8;
+  --ph-c2: #e2ded0;
+}
+
+.ph--2 {
+  --ph-c1: #e9ded9;
+  --ph-c2: #ecd9d0;
+}
+
+.ph--3 {
+  --ph-c1: #e2e7db;
+  --ph-c2: #d3ddcb;
+}
+
+.ph--4 {
+  --ph-c1: #efe2df;
+  --ph-c2: #e7cfc4;
+}
+
+.ph--round {
+  border-radius: 50%;
+}

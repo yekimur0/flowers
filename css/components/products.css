@@ -1,0 +1,102 @@
+/* ==========================================================================
+   Товары / карточки букетов
+   ========================================================================== */
+
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap);
+  margin-bottom: 40px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.product-card:hover {
+  box-shadow: var(--shadow-card);
+  transform: translateY(-2px);
+}
+
+.product-card__media {
+  position: relative;
+  aspect-ratio: 4 / 3.4;
+}
+
+.product-card__fav {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 38px;
+  height: 38px;
+  background: var(--color-surface);
+  border-color: var(--color-surface);
+}
+
+.product-card__body {
+  padding: 16px 4px 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.product-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.product-card__title {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.product-card__price {
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.product-card__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.product-card__actions .btn {
+  padding: 12px 10px;
+  font-size: 14px;
+}
+
+.products__more {
+  display: flex;
+  justify-content: center;
+}
+
+.products__more .btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 992px) {
+  .products__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .products__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card__actions {
+    grid-template-columns: 1fr 1fr;
+  }
+}

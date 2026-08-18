@@ -1,0 +1,270 @@
+/* ==========================================================================
+   Информационные страницы (доставка / оплата / возврат)
+   ========================================================================== */
+
+.policy-block {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.policy-block h2 {
+  font-size: 24px;
+}
+
+.policy-block p {
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+.bullet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bullet-list li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.bullet-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.check-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+}
+
+.check-list svg {
+  width: 20px;
+  height: 20px;
+  color: var(--color-green-dark);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.callout {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--color-bg-soft);
+  border-radius: var(--radius-m);
+  padding: 24px 28px;
+  margin-bottom: 40px;
+}
+
+.callout__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-green-dark);
+}
+
+.callout__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.callout h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.callout p {
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.callout__leaf {
+  margin-left: auto;
+  width: 60px;
+  height: 60px;
+  color: var(--color-green);
+  opacity: 0.5;
+  flex-shrink: 0;
+  display: none;
+}
+
+/* ---------- Способы оплаты / доставки (иконка + текст) ---------- */
+.method-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.method-row {
+  display: flex;
+  gap: 18px;
+}
+
+.method-row__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.method-row__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.method-row h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.method-row p {
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.policy-card {
+  background: var(--color-bg-soft);
+  border-radius: var(--radius-l);
+  padding: clamp(24px, 4vw, 40px);
+  margin-bottom: 32px;
+}
+
+.pay-icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  background: var(--color-bg-soft);
+  border-radius: var(--radius-l);
+  padding: 28px;
+  margin-bottom: 32px;
+}
+
+.pay-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.pay-icon__box {
+  width: 100%;
+  aspect-ratio: 1.4 / 1;
+  border-radius: var(--radius-m);
+  background: var(--color-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--color-green-dark);
+  font-size: 15px;
+}
+
+.pay-icon span {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+/* ---------- Зоны доставки ---------- */
+.zone-map {
+  position: relative;
+  aspect-ratio: 16 / 8;
+  border-radius: var(--radius-l);
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.zone-legend {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  top: 24px;
+  width: min(260px, 80%);
+  background: var(--color-surface);
+  border-radius: var(--radius-m);
+  padding: 22px;
+  overflow-y: auto;
+  box-shadow: var(--shadow-card);
+}
+
+.zone-legend__item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.zone-legend__item:last-child {
+  margin-bottom: 0;
+}
+
+.zone-legend__dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.zone-legend__item h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.zone-legend__item p {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .pay-icons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .callout {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .zone-map {
+    aspect-ratio: auto;
+    height: 420px;
+  }
+
+  .zone-legend {
+    position: static;
+    width: 100%;
+    margin-top: 16px;
+  }
+}

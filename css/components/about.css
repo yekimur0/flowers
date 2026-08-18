@@ -1,0 +1,107 @@
+/* ==========================================================================
+   Текстовые блоки «О нас» / тизеры
+   ========================================================================== */
+
+.prose {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-size: 15px;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  max-width: 92ch;
+}
+
+.prose p {
+  margin: 0;
+}
+
+.prose.is-clamped .prose__extra {
+  display: none;
+}
+
+.prose__more {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.prose__more svg {
+  width: 15px;
+  height: 15px;
+  transition: transform 0.2s ease;
+}
+
+.prose:not(.is-clamped) .prose__more svg {
+  transform: rotate(180deg);
+}
+
+/* ---------- Наши преимущества ---------- */
+.perks-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--gap);
+  align-items: stretch;
+}
+
+.perks-layout__media {
+  border-radius: var(--radius-l);
+  min-height: 320px;
+}
+
+.perks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.perk-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-m);
+  padding: 18px 22px;
+}
+
+.perk-row__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--color-bg-soft);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  flex-shrink: 0;
+}
+
+.perk-row__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.perk-row__title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.perk-row__text {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 900px) {
+  .perks-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .perks-layout__media {
+    min-height: 240px;
+  }
+}

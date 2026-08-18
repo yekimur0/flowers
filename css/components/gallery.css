@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Галерея (круговая карусель)
+   ========================================================================== */
+
+.gallery__carousel {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.gallery__arrow {
+  flex-shrink: 0;
+}
+
+.gallery__track {
+  flex: 1;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(120px, 1fr);
+  gap: clamp(12px, 2vw, 28px);
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding: 6px 2px;
+  scrollbar-width: none;
+}
+
+.gallery__track::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery__item {
+  scroll-snap-align: start;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent-soft);
+  padding: 4px;
+}
+
+.gallery__item .ph {
+  border-radius: 50%;
+}
+
+@media (max-width: 560px) {
+  .gallery__track {
+    grid-auto-columns: minmax(90px, 1fr);
+  }
+}
