@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Отзывы — FLEUR</title>
+<meta name="description" content="Отзывы клиентов о цветочном магазине FLEUR: качество букетов, доставка и сервис." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<header class="site-header">
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span class="topbar__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        Ежедневно с 08:00 до 22:00
+      </span>
+      <span class="topbar__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-7.5 7-12a7 7 0 1 0-14 0c0 4.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        Москва, ул. Тверская, 12
+      </span>
+    </div>
+  </div>
+
+  <div class="header-main">
+    <div class="container header-main__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__name">FLEUR</span>
+        <span class="logo__tagline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20c8 0 14-6 16-16C10 6 4 12 4 20Z"/><path d="M6 18c4-4 8-8 12-12"/></svg>
+          цветы с душой
+        </span>
+      </a>
+
+      <button class="catalog-btn" type="button" id="catalogBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <span>Каталог</span>
+      </button>
+
+      <form class="search" role="search">
+        <label for="searchInput" class="visually-hidden">Поиск товаров</label>
+        <input id="searchInput" type="search" placeholder="Найти товары и магазины" />
+        <button class="search__submit" type="submit" aria-label="Найти">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+      </form>
+
+      <div class="header-main__social">
+        <a class="icon-btn" href="#" aria-label="Telegram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m21 4-9 9M21 4 14 21l-4-7-7-4 18-6Z"/></svg>
+        </a>
+        <a class="icon-btn" href="#" aria-label="ВКонтакте" style="font-weight:700;font-size:13px;">VK</a>
+        <a class="icon-btn" href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+        </a>
+        <a class="icon-btn" href="#" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10.5 9.5v5l4.5-2.5-4.5-2.5Z" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+
+      <span class="header-main__divider"></span>
+
+      <div class="header-main__actions">
+        <a class="action-link" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 5-6 8-6s6.5 2 8 6"/></svg>
+          <span>Войти</span>
+        </a>
+        <a class="action-link" href="favorites.html" id="favoritesLink">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 5c-2.5 4.6-9.5 9-9.5 9Z"/></svg>
+          <span>Избранное</span>
+        </a>
+        <a class="action-link" href="cart.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span>Корзина</span>
+          <span class="action-link__count">0</span>
+        </a>
+      </div>
+
+      <button class="header-main__burger" type="button" id="burgerBtn" aria-label="Открыть меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <nav class="main-nav" aria-label="Основная навигация">
+    <div class="container main-nav__inner">
+      <ul class="main-nav__list main-nav__list--primary">
+        <li><a href="catalog.html">Тренды</a></li>
+        <li><a href="catalog.html">Скидки</a></li>
+        <li><a href="#">Корпоративным клиентам
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </a></li>
+        <li><a href="catalog.html">Цветы</a></li>
+        <li><a href="catalog.html">Букеты</a></li>
+        <li><a href="catalog.html">Композиции</a></li>
+        <li><a href="catalog.html">Подарочные наборы</a></li>
+      </ul>
+      <span class="main-nav__divider"></span>
+      <ul class="main-nav__list main-nav__list--secondary">
+        <li><a href="delivery.html">Условия доставки</a></li>
+        <li><a href="payment.html">Условия оплаты</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="blog.html">Блог</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- Мобильная панель -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav__overlay" id="mobileNavOverlay"></div>
+  <div class="mobile-nav__panel">
+    <div class="mobile-nav__top">
+      <span class="logo__name" style="font-size:22px;">FLEUR</span>
+      <button class="mobile-nav__close" id="mobileNavClose" aria-label="Закрыть меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+
+    <form class="search" role="search">
+      <label for="searchInputMobile" class="visually-hidden">Поиск товаров</label>
+      <input id="searchInputMobile" type="search" placeholder="Найти товары и магазины" />
+      <button class="search__submit" type="submit" aria-label="Найти">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+    </form>
+
+    <a class="catalog-btn btn--full" href="catalog.html" style="justify-content:center;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <span>Каталог</span>
+    </a>
+
+    <ul class="mobile-nav__list">
+      <li><a href="catalog.html">Тренды</a></li>
+      <li><a href="catalog.html">Скидки</a></li>
+      <li><a href="#">Корпоративным клиентам</a></li>
+      <li><a href="catalog.html">Цветы</a></li>
+      <li><a href="catalog.html">Букеты</a></li>
+      <li><a href="catalog.html">Композиции</a></li>
+      <li><a href="catalog.html">Подарочные наборы</a></li>
+      <li><a href="delivery.html">Условия доставки</a></li>
+      <li><a href="payment.html">Условия оплаты</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+      <li><a href="about.html">О нас</a></li>
+      <li><a href="blog.html">Блог</a></li>
+    </ul>
+
+    <div class="mobile-nav__social">
+      <a class="icon-btn" href="#" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m21 4-9 9M21 4 14 21l-4-7-7-4 18-6Z"/></svg>
+      </a>
+      <a class="icon-btn" href="#" aria-label="ВКонтакте" style="font-weight:700;font-size:13px;">VK</a>
+      <a class="icon-btn" href="#" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Панель «Избранное» -->
+<div class="side-drawer" id="favoritesDrawer">
+  <div class="side-drawer__overlay" id="favoritesOverlay"></div>
+  <div class="side-drawer__panel">
+    <div class="side-drawer__top">
+      <div>
+        <h2 style="margin:0;">Избранное</h2>
+        <p class="side-drawer__count">3 товара</p>
+      </div>
+      <button class="side-drawer__close" id="favoritesClose" aria-label="Закрыть">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+
+    <div class="fav-card">
+      <div class="fav-card__media ph ph--1"></div>
+      <div>
+        <button class="fav-card__remove" aria-label="Убрать из избранного"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.4-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.6-9.5 9-9.5 9Z"/></svg></button>
+        <h3 class="fav-card__title">Букет «Нежность»</h3>
+        <p class="fav-card__text">Розы, эустома, эвкалипт, зелень в нежной цветовой гамме.</p>
+        <p class="fav-card__price">4 250 ₽</p>
+        <button class="btn btn--outline btn--full">В корзину</button>
+      </div>
+    </div>
+
+    <div class="fav-card">
+      <div class="fav-card__media ph ph--2"></div>
+      <div>
+        <button class="fav-card__remove" aria-label="Убрать из избранного"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.4-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.6-9.5 9-9.5 9Z"/></svg></button>
+        <h3 class="fav-card__title">Букет «Пионы»</h3>
+        <p class="fav-card__text">Свежие пионы в стильной упаковке.</p>
+        <p class="fav-card__price">5 850 ₽</p>
+        <button class="btn btn--outline btn--full">В корзину</button>
+      </div>
+    </div>
+
+    <div class="fav-card">
+      <div class="fav-card__media ph ph--3"></div>
+      <div>
+        <button class="fav-card__remove" aria-label="Убрать из избранного"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.4-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.6-9.5 9-9.5 9Z"/></svg></button>
+        <h3 class="fav-card__title">Букет «Облако»</h3>
+        <p class="fav-card__text">Гортензия, белые розы, эвкалипт.</p>
+        <p class="fav-card__price">4 900 ₽</p>
+        <button class="btn btn--outline btn--full">В корзину</button>
+      </div>
+    </div>
+
+    <div class="side-drawer__footer">
+      <a href="cart.html" class="btn btn--primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        Перейти в корзину (2)
+      </a>
+      <button class="side-drawer__clear" type="button">Очистить избранное</button>
+    </div>
+  </div>
+</div>
+<main><section class="section" style="padding-bottom:0;">
+  <div class="container">
+    <div class="breadcrumbs"><a href="index.html">Главная</a> / <span>Отзывы</span></div>
+    <h1 style="margin-block:16px 28px;">Отзывы</h1>
+    <div class="prose" style="margin-bottom:40px;">
+      <p>Для нас важно мнение каждого клиента. Ваши отзывы помогают нам становиться лучше, поддерживать высокий уровень сервиса и предлагать только свежие и качественные цветы.</p>
+      <p>Мы благодарим вас за доверие и обратную связь. Ознакомьтесь с отзывами наших клиентов и убедитесь в качестве нашей работы.</p>
+    </div>
+  </div>
+</section>
+<section class="section reviews" style="padding-top:0;">
+  <div class="container">
+    <div class="reviews__grid">
+      <div class="review-summary">
+        <div class="review-summary__score">4.9 <span>из 5</span></div>
+        <div class="stars stars--lg" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7L12 2.5Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7L12 2.5Z"/></svg></div>
+        <p class="review-summary__count">На основе 5860 оценок</p>
+        <div class="review-summary__divider">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20c8 0 14-6 16-16C10 6 4 12 4 20Z"/></svg>
+        </div>
+        <a class="review-summary__source" href="#">
+          <svg viewBox="0 0 24 24" fill="#FC3F1D" stroke="none"><circle cx="12" cy="12" r="10"/></svg>
+          Яндекс Карты
+        </a>
+        <button class="btn btn--outline btn--full">
+          Оставить отзыв
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1 11-11-3-3L5 16l-1 4Z"/></svg>
+        </button>
+      </div>
+      
+        <article class="review-card">
+          <div class="review-card__head">
+            <div class="review-card__avatar ph ph--1"></div>
+            <div>
+              <p class="review-card__name">zelao</p>
+              <div class="stars">★★★★<span style="opacity:.35">★</span></div>
+            </div>
+          </div>
+          <p class="review-card__date">5 июня 2026</p>
+          <p class="review-card__text">Ожидала большой выбор цветов, но тоже неплохо</p>
+          <div class="review-card__foot">
+            <a href="#">Отзыв на Яндекс.Карты</a>
+            
+          </div>
+        </article>
+        <article class="review-card">
+          <div class="review-card__head">
+            <div class="review-card__avatar ph ph--2"></div>
+            <div>
+              <p class="review-card__name">Андрей Дзюба</p>
+              <div class="stars">★★★★<span style="opacity:.35">★</span></div>
+            </div>
+          </div>
+          <p class="review-card__date">5 июня 2026</p>
+          <p class="review-card__text">Кругом одни цветы. Хотел там кофе попить - не нашел. (Нашёл через пару дней 😅) Ещё стоянки для машин разрисовали знаками для инвалидов.</p>
+          <div class="review-card__foot">
+            <a href="#">Отзыв на Яндекс.Карты</a>
+            <span class="review-card__reaction"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11v9H4v-9h3Zm0 0 4-7c1 0 2 1 2 2v4h5a2 2 0 0 1 2 2l-1.5 6a2 2 0 0 1-2 1.5H7"/></svg>1</span>
+          </div>
+        </article>
+        <article class="review-card">
+          <div class="review-card__head">
+            <div class="review-card__avatar ph ph--3"></div>
+            <div>
+              <p class="review-card__name">Александр С.</p>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-card__date">4 июня 2026</p>
+          <p class="review-card__text">Большой выбор цветов по более низким ценам, чем в магазинах.</p>
+          <div class="review-card__foot">
+            <a href="#">Отзыв на Яндекс.Карты</a>
+            <span class="review-card__reaction"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11v9H4v-9h3Zm0 0 4-7c1 0 2 1 2 2v4h5a2 2 0 0 1 2 2l-1.5 6a2 2 0 0 1-2 1.5H7"/></svg>3</span>
+          </div>
+        </article>
+        <article class="review-card">
+          <div class="review-card__head">
+            <div class="review-card__avatar ph ph--4"></div>
+            <div>
+              <p class="review-card__name">Мария Л.</p>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-card__date">3 июня 2026</p>
+          <p class="review-card__text">Свежие цветы, вежливый персонал, помогли собрать красивый букет на день рождения. Спасибо!</p>
+          <div class="review-card__foot">
+            <a href="#">Отзыв на Яндекс.Карты</a>
+            <span class="review-card__reaction"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11v9H4v-9h3Zm0 0 4-7c1 0 2 1 2 2v4h5a2 2 0 0 1 2 2l-1.5 6a2 2 0 0 1-2 1.5H7"/></svg>2</span>
+          </div>
+        </article>
+        <article class="review-card">
+          <div class="review-card__head">
+            <div class="review-card__avatar ph ph--1"></div>
+            <div>
+              <p class="review-card__name">Игорь К.</p>
+              <div class="stars">★★★★<span style="opacity:.35">★</span></div>
+            </div>
+          </div>
+          <p class="review-card__date">2 июня 2026</p>
+          <p class="review-card__text">Отличный ассортимент, но цены чуть выше среднего. Качество цветов на высоте.</p>
+          <div class="review-card__foot">
+            <a href="#">Отзыв на Яндекс.Карты</a>
+            <span class="review-card__reaction"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11v9H4v-9h3Zm0 0 4-7c1 0 2 1 2 2v4h5a2 2 0 0 1 2 2l-1.5 6a2 2 0 0 1-2 1.5H7"/></svg>1</span>
+          </div>
+        </article>
+        <article class="review-card">
+          <div class="review-card__head">
+            <div class="review-card__avatar ph ph--2"></div>
+            <div>
+              <p class="review-card__name">Ольга П.</p>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-card__date">1 июня 2026</p>
+          <p class="review-card__text">Покупаю здесь цветы каждую неделю. Всегда свежие и красивые, долго стоят в вазе.</p>
+          <div class="review-card__foot">
+            <a href="#">Отзыв на Яндекс.Карты</a>
+            <span class="review-card__reaction"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11v9H4v-9h3Zm0 0 4-7c1 0 2 1 2 2v4h5a2 2 0 0 1 2 2l-1.5 6a2 2 0 0 1-2 1.5H7"/></svg>1</span>
+          </div>
+        </article>
+        <article class="review-card">
+          <div class="review-card__head">
+            <div class="review-card__avatar ph ph--3"></div>
+            <div>
+              <p class="review-card__name">Елена В.</p>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-card__date">31 мая 2026</p>
+          <p class="review-card__text">Приятный магазин с уютной атмосферой. Флористы — профессионалы своего дела, всегда посоветуют лучший вариант.</p>
+          <div class="review-card__foot">
+            <a href="#">Отзыв на Яндекс.Карты</a>
+            <span class="review-card__reaction"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11v9H4v-9h3Zm0 0 4-7c1 0 2 1 2 2v4h5a2 2 0 0 1 2 2l-1.5 6a2 2 0 0 1-2 1.5H7"/></svg>2</span>
+          </div>
+        </article>
+    </div>
+
+    <div class="products__more" style="margin-top:32px;">
+      <button class="btn btn--outline">Загрузить ещё <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+    </div>
+  </div>
+</section>
+
+  <!-- ==================== НАШИ КОНТАКТЫ ==================== -->
+  <section class="section contacts">
+    <div class="container">
+      <div class="section__head">
+        <h2>Наши контакты</h2>
+      </div>
+
+      <div class="contacts__grid">
+        <div class="contacts__list">
+          <a class="contact-item" href="tel:+74951204070">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2C9.6 21 3 14.4 3 6a2 2 0 0 1 2-2Z"/></svg>
+            +7 (495) 120-40-70
+          </a>
+          <a class="contact-item" href="mailto:hello@flaur.ru">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+            hello@flaur.ru
+          </a>
+          <span class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-7.5 7-12a7 7 0 1 0-14 0c0 4.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Москва, ул. Петровка, 15
+          </span>
+          <span class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            Ежедневно 8:00–23:00
+          </span>
+          <a class="contact-item" href="#">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m21 4-9 9M21 4 14 21l-4-7-7-4 18-6Z"/></svg>
+            Telegram: @flaur
+          </a>
+          <a class="contact-item" href="#">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 20l1.1-5.5A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+            WhatsApp: +7 (495) 120-40-70
+          </a>
+        </div>
+
+        <div class="contacts__map ph ph--3" aria-label="Карта проезда">
+          <div class="contacts__map-pin">
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-7.5 7-12a7 7 0 1 0-14 0c0 4.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </span>
+            <em>Москва, ул. Петровка, 15</em>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="site-footer">
+  <div class="footer-card">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo__name">FLEUR</span>
+            <span class="logo__tagline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20c8 0 14-6 16-16C10 6 4 12 4 20Z"/><path d="M6 18c4-4 8-8 12-12"/></svg>
+              цветы с душой
+            </span>
+          </a>
+          <p class="footer-brand__desc">Авторские букеты и цветочные композиции с доставкой по Москве и Московской области.</p>
+
+          <div class="footer-contacts">
+            <a class="footer-contacts__item" href="tel:+74952152250">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2C9.6 21 3 14.4 3 6a2 2 0 0 1 2-2Z"/></svg>
+              <span>+7 (495) 215-22-50<br>Ежедневно с 08:00 до 22:00</span>
+            </a>
+            <a class="footer-contacts__item" href="mailto:info@fleur-boutique.ru">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+              <span>info@fleur-boutique.ru</span>
+            </a>
+            <span class="footer-contacts__item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+              <span>Пн–Вс: 08:00 – 22:00</span>
+            </span>
+            <span class="footer-contacts__item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-7.5 7-12a7 7 0 1 0-14 0c0 4.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              <span>г. Москва, ул. Большая Дмитровка, д. 32, стр. 1</span>
+            </span>
+          </div>
+
+          <p class="footer-col__title" style="font-size:14px;margin-bottom:10px;">Мы в соцсетях</p>
+          <div class="footer-social">
+            <a class="icon-btn" href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+            </a>
+            <a class="icon-btn" href="#" aria-label="ВКонтакте" style="font-weight:700;font-size:13px;">VK</a>
+            <a class="icon-btn" href="#" aria-label="Telegram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m21 4-9 9M21 4 14 21l-4-7-7-4 18-6Z"/></svg>
+            </a>
+            <a class="icon-btn" href="#" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 20l1.1-5.5A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-col__title">Каталог</h3>
+          <ul class="footer-col__list">
+            <li><a href="catalog.html">Авторские букеты</a></li>
+            <li><a href="catalog.html">Монобукеты</a></li>
+            <li><a href="catalog.html">Сборные букеты</a></li>
+            <li><a href="catalog.html">Цветы поштучно</a></li>
+            <li><a href="catalog.html">Композиции в коробках</a></li>
+            <li><a href="catalog.html">Свадебная флористика</a></li>
+            <li><a href="catalog.html">Подарки и наборы</a></li>
+            <li><a href="catalog.html">Новинки</a></li>
+            <li><a href="catalog.html">Акции</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-col__title">По цветам</h3>
+          <div class="footer-colors">
+            <ul class="footer-col__list">
+              <li><a href="catalog.html">Розы</a></li>
+              <li><a href="catalog.html">Пионы</a></li>
+              <li><a href="catalog.html">Тюльпаны</a></li>
+              <li><a href="catalog.html">Гортензии</a></li>
+              <li><a href="catalog.html">Лилии</a></li>
+              <li><a href="catalog.html">Хризантемы</a></li>
+              <li><a href="catalog.html">Эустомы</a></li>
+              <li><a href="catalog.html">Ромашки</a></li>
+            </ul>
+            <ul class="footer-col__list">
+              <li><a href="catalog.html">Гвоздики</a></li>
+              <li><a href="catalog.html">Гладиолусы</a></li>
+              <li><a href="catalog.html">Орхидеи</a></li>
+              <li><a href="catalog.html">Альстромерии</a></li>
+              <li><a href="catalog.html">Каллы</a></li>
+              <li><a href="catalog.html">Ирисы</a></li>
+              <li><a href="catalog.html">Подсолнухи</a></li>
+              <li><a href="catalog.html">Другие цветы</a></li>
+            </ul>
+          </div>
+          <a class="footer-colors__all" href="catalog.html">Смотреть все цветы
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-col__title">Клиентам</h3>
+          <ul class="footer-col__list">
+            <li><a href="delivery.html">Условия доставки</a></li>
+            <li><a href="payment.html">Условия оплаты</a></li>
+            <li><a href="returns.html">Условия возврата</a></li>
+            <li><a href="faq.html">Ответы на вопросы (FAQ)</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="blog.html">Блог</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-help">
+          <h3 class="footer-help__title">Нужна помощь?</h3>
+          <p class="footer-help__text">Мы всегда на связи и готовы помочь с выбором букета.</p>
+          <button class="btn btn--primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m21 4-9 9M21 4 14 21l-4-7-7-4 18-6Z"/></svg>
+            Написать в Telegram
+          </button>
+          <button class="btn btn--outline">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 20l1.1-5.5A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+            Написать в WhatsApp
+          </button>
+          <div class="footer-help__image ph ph--4"></div>
+        </div>
+      </div>
+
+      <div class="footer-perks">
+        <div class="footer-perks__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="7" width="13" height="10"/><path d="M14 10h4l3 3v4h-7z"/><circle cx="6" cy="19" r="1.6"/><circle cx="17.5" cy="19" r="1.6"/></svg>
+          Быстрая доставка по Москве и области
+        </div>
+        <div class="footer-perks__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20c8 0 14-6 16-16C10 6 4 12 4 20Z"/><path d="M6 18c4-4 8-8 12-12"/></svg>
+          Свежие цветы каждый день
+        </div>
+        <div class="footer-perks__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3Z"/></svg>
+          Гарантия качества на все букеты
+        </div>
+        <div class="footer-perks__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+          Удобные способы оплаты
+        </div>
+        <div class="footer-perks__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="11" rx="1.5"/><path d="M3 13h18"/><path d="M12 9v11"/><path d="M12 9c-2-4-7-3-6 0 .6 1.3 3 1 6 0Zm0 0c2-4 7-3 6 0-.6 1.3-3 1-6 0Z"/></svg>
+          Красиво упакуем ваш заказ
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-payment">
+          <h4 class="footer-bottom__title">Способы оплаты</h4>
+          <div class="footer-payment__icons">
+            <span>МИР</span>
+            <span>MC</span>
+            <span>VISA</span>
+            <span>Pay</span>
+          </div>
+        </div>
+
+        <div class="footer-requisites">
+          <h4 class="footer-bottom__title">Реквизиты</h4>
+          <p>
+            ИП Иванова Мария Сергеевна<br>
+            ИНН 770123456789<br>
+            ОГРНИП 316774600123456<br>
+            р/с 40802810900123456<br>
+            АО «Тинькофф Банк»<br>
+            к/с 30101810145250000974<br>
+            БИК 044525974
+          </p>
+        </div>
+
+        <div class="footer-maps">
+          <h4 class="footer-bottom__title">Мы на картах</h4>
+          <div class="footer-maps__list">
+            <a href="#">
+              <svg viewBox="0 0 24 24" fill="#FC3F1D" stroke="none"><circle cx="12" cy="12" r="10"/></svg>
+              Яндекс Карты
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+            <a href="#">
+              <svg viewBox="0 0 24 24" fill="#22B14C" stroke="none"><circle cx="12" cy="12" r="10"/></svg>
+              2GIS
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-legal">
+          <a href="tech.html">Политика конфиденциальности
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </a>
+          <a href="#">Пользовательское соглашение (оферта)
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </a>
+          <a href="email-subscribe.html">Согласие на получение email рассылки
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <p class="footer-copy">© 2024–2025 FLEUR — доставка цветов и авторские букеты</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
