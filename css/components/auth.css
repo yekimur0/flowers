@@ -1,0 +1,347 @@
+/* ==========================================================================
+   Авторизация / Регистрация
+   ========================================================================== */
+
+.auth-section {
+  display: flex;
+  justify-content: center;
+  padding-block: clamp(32px, 6vw, 64px);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 460px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-l);
+  padding: clamp(28px, 4vw, 40px);
+}
+
+.auth-card__title {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.auth-card__subtitle {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.auth-field {
+  margin-bottom: 20px;
+}
+
+.auth-field label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.auth-field .field {
+  width: 100%;
+}
+
+.auth-field--password {
+  position: relative;
+}
+
+.auth-field--password .field {
+  padding-right: 48px;
+}
+
+.field-eye {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+}
+
+.field-eye:hover {
+  background: var(--color-bg-soft);
+  color: var(--color-text);
+}
+
+.field-eye svg {
+  width: 18px;
+  height: 18px;
+}
+
+.field-eye .icon-eye-off {
+  display: none;
+}
+
+.field-eye.is-visible .icon-eye {
+  display: none;
+}
+
+.field-eye.is-visible .icon-eye-off {
+  display: block;
+}
+
+.field-error-msg {
+  display: none;
+  font-size: 12px;
+  color: #b3435a;
+  margin-top: 6px;
+}
+
+.auth-field.is-error .field {
+  border-color: #b3435a;
+  background: #fbf1f2;
+}
+
+.auth-field.is-error .field-error-msg {
+  display: block;
+}
+
+.auth-forgot {
+  display: block;
+  text-align: right;
+  font-size: 13px;
+  color: var(--color-accent);
+  margin-top: -8px;
+  margin-bottom: 22px;
+}
+
+.auth-forgot:hover {
+  text-decoration: underline;
+}
+
+.auth-card .btn {
+  width: 100%;
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-block: 22px;
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.auth-divider--plain {
+  height: 1px;
+  background: var(--color-border);
+  margin-block: 22px;
+  border: none;
+}
+
+.auth-switch {
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-text-muted);
+  margin-bottom: 20px;
+}
+
+.auth-switch a {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+.btn--vk {
+  background: #0077ff;
+  color: #fff;
+}
+
+.btn--vk:hover {
+  background: #0066dd;
+}
+
+.btn--vk svg {
+  width: 18px;
+  height: 18px;
+}
+
+.auth-code-field {
+  position: relative;
+}
+
+.auth-code-field .field {
+  padding-right: 48px;
+}
+
+.field-paste {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+}
+
+.field-paste:hover {
+  background: var(--color-bg-soft);
+  color: var(--color-text);
+}
+
+.field-paste svg {
+  width: 17px;
+  height: 17px;
+}
+
+.auth-resend {
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-top: 16px;
+}
+
+.auth-resend a {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.auth-resend a.is-disabled {
+  color: var(--color-text-muted);
+  pointer-events: none;
+  font-weight: 400;
+}
+
+.auth-back {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-top: 18px;
+}
+
+.auth-back:hover {
+  color: var(--color-accent);
+}
+
+/* ---------- Декоративная иконка в поле (email/код) ---------- */
+.auth-field--icon {
+  position: relative;
+}
+
+.auth-field--icon .field {
+  padding-right: 48px;
+}
+
+.field-decor-icon {
+  position: absolute;
+  right: 16px;
+  bottom: 14px;
+  width: 20px;
+  height: 20px;
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+/* ---------- Подсказка с иконкой ---------- */
+.auth-hint {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-bottom: 22px;
+}
+
+.auth-hint svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: var(--color-accent);
+}
+
+/* ---------- Индикатор этапов ---------- */
+.steps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 28px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 120px;
+}
+
+.step__circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: var(--color-surface);
+}
+
+.step__circle svg {
+  width: 16px;
+  height: 16px;
+}
+
+.step__label {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.step.is-active .step__circle {
+  background: var(--color-green);
+  border-color: var(--color-green);
+  color: #fff;
+}
+
+.step.is-active .step__label {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.step.is-done .step__circle {
+  border-color: var(--color-green);
+  color: var(--color-green-dark);
+}
+
+.step__line {
+  width: 60px;
+  height: 1px;
+  border-top: 1px dashed var(--color-border);
+  margin-top: 17px;
+  flex-shrink: 0;
+}
+
+.auth-step-view {
+  display: none;
+}
+
+.auth-step-view.is-active {
+  display: block;
+}

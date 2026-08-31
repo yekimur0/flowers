@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Условия доставки — FLEUR</title>
-<meta name="description" content="Условия и зоны доставки цветов FLEUR по Москве и Московской области, стоимость и сроки." />
+<title>Авторизация — FLEUR</title>
+<meta name="description" content="Вход в личный кабинет FLEUR по email и паролю или через ВКонтакте." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="css/main.css" />
@@ -218,208 +218,41 @@
     </div>
   </div>
 </div>
-<main><section class="section" style="padding-bottom:0;">
+<main><section class="section">
   <div class="container">
-    <div class="breadcrumbs"><a href="index.html">Главная</a> / <span>Условия доставки</span></div>
-    <h1 style="margin-block:16px 32px;">Условия доставки</h1>
+    <div class="auth-section">
+      <div class="auth-card">
+        <h1 class="auth-card__title">Авторизация</h1>
 
-    <div class="hero-card" style="grid-template-columns:1.3fr 1fr;margin-bottom:40px;">
-      <div class="hero-card__content">
-        <h2 style="font-size:22px;">Доставка свежих цветов по Москве и Московской области</h2>
-        <p>Мы доставляем букеты ежедневно, чтобы ваши цветы приезжали свежими, аккуратно оформленными и точно в назначенное время.</p>
-        <p>Наши флористы собирают каждый заказ непосредственно перед отправкой, поэтому композиции сохраняют максимальную свежесть и долго радуют получателя.</p>
-        <p>Доставка осуществляется собственной курьерской службой по Москве и Московской области. Перед отправкой каждый букет проходит финальную проверку качества, после чего надёжно упаковывается для безопасной транспортировки.</p>
-        <p>Вы можете выбрать удобную дату и временной интервал доставки при оформлении заказа. При необходимости курьер заранее свяжется с получателем для уточнения деталей, сохранив эффект сюрприза, если это требуется.</p>
-        <p>Мы также предлагаем срочную доставку в день оформления заказа при наличии свободных временных интервалов.</p>
+        <form id="loginForm">
+          <div class="auth-field">
+            <label for="loginEmail">Логин (почта)</label>
+            <input class="field" type="email" id="loginEmail" placeholder="Введите ваш e-mail" required>
+          </div>
+
+          <div class="auth-field auth-field--password">
+            <label for="loginPassword">Пароль</label>
+            <input class="field" type="password" id="loginPassword" placeholder="Введите пароль" required>
+            <button class="field-eye" type="button" aria-label="Показать пароль"><svg class="icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg><svg class="icon-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18"/><path d="M10.6 5.1A10.9 10.9 0 0 1 12 5c6.5 0 10 7 10 7a17.6 17.6 0 0 1-3.2 4.1M6.5 6.6C4 8.3 2 12 2 12s3.5 7 10 7a10 10 0 0 0 4.2-.9"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg></button>
+          </div>
+
+          <a class="auth-forgot" href="password-reset.html">Забыли пароль?</a>
+
+          <button class="btn btn--primary" type="submit">Войти</button>
+        </form>
+
+        <hr class="auth-divider--plain">
+
+        <p class="auth-switch" style="margin-bottom:14px;">Нет аккаунта? <a href="register.html">Зарегистрируйтесь</a></p>
+        <a class="btn btn--outline" href="register.html">Регистрация</a>
+
+        <div class="auth-divider">или</div>
+
+        <button class="btn btn--vk" type="button"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.4 17.2c-4.9 0-7.7-3.4-7.8-9h2.5c.1 4 1.9 5.7 3.3 6V8.2h2.3v3.6c1.4-.1 2.8-1.7 3.3-3.6h2.3c-.4 2.3-2.1 3.9-3.3 4.6 1.2.5 3.2 1.9 3.9 4.4h-2.5c-.6-1.8-2-3.2-3.8-3.4v3.4h-.2Z"/></svg> Авторизация через ВКонтакте</button>
       </div>
-      <div class="hero-card__media ph ph--2"></div>
-    </div>
-
-    <div class="policy-block">
-      <h2>Стоимость доставки</h2>
-      <ul class="check-list">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><span>Бесплатная доставка при заказе от 7 000 ₽ по Москве.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><span>Стандартная доставка — ежедневно с 08:00 до 23:00.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><span>Срочная доставка возможна в течение 2–3 часов после подтверждения заказа.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><span>Заказы за пределы МКАД рассчитываются индивидуально.</span></li>
-      </ul>
-    </div>
-
-    <div class="policy-block">
-      <h2>Гарантия качества</h2>
-      <p>Мы уверены в качестве каждого букета. Если при получении заказа возникнут вопросы по состоянию цветов или упаковке, свяжитесь с нами в течение 24 часов. Мы оперативно рассмотрим обращение и предложим решение: замену букета, повторную доставку или возврат денежных средств.</p>
-      <p>Наша цель — чтобы каждый заказ приносил только положительные эмоции.</p>
     </div>
   </div>
-
-  <div class="callout">
-    <span class="callout__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="7" width="13" height="10"/><path d="M14 10h4l3 3v4h-7z"/><circle cx="6" cy="19" r="1.6"/><circle cx="17.5" cy="19" r="1.6"/></svg></span>
-    <div><h3>Важно знать</h3><p>Перед доставкой мы всегда уведомляем вас о статусе заказа. Вы получите SMS или звонок, когда букет будет передан курьеру.</p></div>
-  </div>
-</section>
-<section class="section" style="padding-block:40px 0;">
-  <div class="container">
-    <h2 style="margin-bottom:24px;">Зоны доставки</h2>
-    <div class="zone-map ph ph--3">
-      <div class="zone-legend">
-        <div class="zone-legend__item">
-          <span class="zone-legend__dot" style="background:#7c9070;"></span>
-          <div><h4>Зона 1 — центр</h4><p>Бесплатная доставка при заказе от 7 000 ₽<br>Доставка 1–2 часа</p></div>
-        </div>
-        <div class="zone-legend__item">
-          <span class="zone-legend__dot" style="background:#e8c46b;"></span>
-          <div><h4>Зона 2 — МКАД</h4><p>Доставка 300 ₽<br>Доставка 2–3 часа</p></div>
-        </div>
-        <div class="zone-legend__item">
-          <span class="zone-legend__dot" style="background:#e5a08c;"></span>
-          <div><h4>Зона 3 — за МКАД</h4><p>Доставка 600 ₽<br>Доставка 3–5 часов</p></div>
-        </div>
-      </div>
-    </div>
-    <p style="color:var(--color-text-muted);font-size:14px;margin-top:-24px;margin-bottom:40px;">Точную стоимость доставки уточняйте при оформлении заказа.</p>
-  </div>
-</section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section__head"><h2>Часто задаваемые вопросы</h2></div>
-      <div class="faq-list">
-      <div class="faq-item is-open">
-        <button type="button" class="faq-item__q"><span>Как осуществляется доставка цветов?</span><span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-        <div class="faq-item__a-wrap"><div class="faq-item__a"><p>Мы доставляем цветы по Москве и ближайшему Подмосковью ежедневно с 8:00 до 23:00. Доставка осуществляется собственной службой курьеров, что позволяет нам гарантировать свежесть цветов и точное время доставки. Вы можете выбрать удобный интервал доставки при оформлении заказа.</p></div></div>
-      </div>
-      <div class="faq-item">
-        <button type="button" class="faq-item__q"><span>Какие способы оплаты доступны?</span><span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-        <div class="faq-item__a-wrap"><div class="faq-item__a"><p>Мы принимаем оплату картами МИР, Visa, Mastercard, через СБП, наличными курьеру, а также безналичным расчётом для организаций.</p></div></div>
-      </div>
-      <div class="faq-item">
-        <button type="button" class="faq-item__q"><span>Можно ли изменить адрес или время доставки после оформления заказа?</span><span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-        <div class="faq-item__a-wrap"><div class="faq-item__a"><p>Да, свяжитесь с нами по телефону или в мессенджере как можно раньше — мы постараемся учесть изменения.</p></div></div>
-      </div>
-      <div class="faq-item">
-        <button type="button" class="faq-item__q"><span>Какие цветы вы используете в букетах?</span><span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-        <div class="faq-item__a-wrap"><div class="faq-item__a"><p>Мы работаем только со свежими цветами от проверенных поставщиков: розы, пионы, тюльпаны, эустомы и многие другие.</p></div></div>
-      </div>
-      <div class="faq-item">
-        <button type="button" class="faq-item__q"><span>Можно ли заказать букет по индивидуальному запросу?</span><span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-        <div class="faq-item__a-wrap"><div class="faq-item__a"><p>Конечно! Опишите пожелания флористу, и мы соберём уникальную композицию специально для вас.</p></div></div>
-      </div>
-      <div class="faq-item">
-        <button type="button" class="faq-item__q"><span>Что делать, если получатель не сможет получить букет?</span><span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-        <div class="faq-item__a-wrap"><div class="faq-item__a"><p>Свяжитесь с нашей службой поддержки — мы согласуем повторную доставку в удобное время.</p></div></div>
-      </div>
-      <div class="faq-item">
-        <button type="button" class="faq-item__q"><span>Как долго сохраняется свежесть цветов?</span><span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-        <div class="faq-item__a-wrap"><div class="faq-item__a"><p>При правильном уходе букет сохраняет свежесть 5–7 дней. Мы прикладываем рекомендации по уходу к каждому заказу.</p></div></div>
-      </div>
-      <div class="faq-item">
-        <button type="button" class="faq-item__q"><span>Есть ли у вас программа лояльности или скидки?</span><span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-        <div class="faq-item__a-wrap"><div class="faq-item__a"><p>Да, за каждый заказ начисляются бонусы, которыми можно оплатить до 20% следующей покупки.</p></div></div>
-      </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== ОТЗЫВЫ ==================== -->
-  <section class="section reviews">
-    <div class="container">
-      <div class="section__head">
-        <h2>Отзывы наших клиентов</h2>
-        <a class="link-arrow" href="reviews.html">Смотреть все отзывы
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
-
-      <div class="reviews__grid">
-        <div class="review-summary">
-          <div class="review-summary__score">4.9 <span>из 5</span></div>
-          <div class="stars stars--lg" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7L12 2.5Z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7L12 2.5Z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7L12 2.5Z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7L12 2.5Z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.7-4.9 4.6 1.3 6.6L12 17.6l-5.9 3 1.3-6.6-4.9-4.6 6.6-.7L12 2.5Z"/></svg>
-          </div>
-          <p class="review-summary__count">На основе 5860 оценок</p>
-          <div class="review-summary__divider">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20c8 0 14-6 16-16C10 6 4 12 4 20Z"/></svg>
-          </div>
-          <a class="review-summary__source" href="#">
-            <svg viewBox="0 0 24 24" fill="#FC3F1D" stroke="none"><circle cx="12" cy="12" r="10"/></svg>
-            Яндекс Карты
-          </a>
-          <button class="btn btn--outline btn--full">
-            Оставить отзыв
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1 11-11-3-3L5 16l-1 4Z"/></svg>
-          </button>
-        </div>
-
-        <article class="review-card">
-          <div class="review-card__head">
-            <div class="review-card__avatar ph ph--2"></div>
-            <div>
-              <p class="review-card__name">zelao</p>
-              <div class="stars">★★★★<span style="opacity:.35">★</span></div>
-            </div>
-          </div>
-          <p class="review-card__date">5 июня 2026</p>
-          <p class="review-card__text">Ожидала большой выбор цветов, но тоже неплохо</p>
-          <div class="review-card__foot">
-            <a href="#">Отзыв на Яндекс.Карты</a>
-          </div>
-        </article>
-
-        <article class="review-card">
-          <div class="review-card__head">
-            <div class="review-card__avatar ph ph--3"></div>
-            <div>
-              <p class="review-card__name">Андрей Дзюба</p>
-              <div class="stars">★★★★<span style="opacity:.35">★</span></div>
-            </div>
-          </div>
-          <p class="review-card__date">5 июня 2026</p>
-          <p class="review-card__text">Кругом одни цветы. Хотел там кофе попить — не нашел. Ещё стоянки для машин разрисовали знаками для инвалидов.</p>
-          <div class="review-card__foot">
-            <a href="#">Отзыв на Яндекс.Карты</a>
-            <span class="review-card__reaction">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 13V4h3v9h-3Zm0 0-4 7c-1 0-2-1-2-2v-4H6a2 2 0 0 1-2-2l1.5-6A2 2 0 0 1 7.5 4H17"/></svg>
-              1
-            </span>
-          </div>
-        </article>
-
-        <article class="review-card">
-          <div class="review-card__head">
-            <div class="review-card__avatar ph ph--1"></div>
-            <div>
-              <p class="review-card__name">Александр С.</p>
-              <div class="stars">★★★★★</div>
-            </div>
-          </div>
-          <p class="review-card__date">4 июня 2026</p>
-          <p class="review-card__text">Большой выбор цветов по более низким ценам, чем в магазинах.</p>
-          <div class="review-card__foot">
-            <a href="#">Отзыв на Яндекс.Карты</a>
-            <span class="review-card__reaction">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11v9H4v-9h3Zm0 0 4-7c1 0 2 1 2 2v4h5a2 2 0 0 1 2 2l-1.5 6a2 2 0 0 1-2 1.5H7"/></svg>
-              3
-            </span>
-          </div>
-        </article>
-      </div>
-
-      <div class="reviews__nav">
-        <button class="icon-btn" aria-label="Назад">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
-        </button>
-        <button class="icon-btn is-active" aria-label="Вперёд">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </button>
-        <div class="reviews__track"><span class="reviews__progress"></span></div>
-      </div>
-    </div>
-  </section>
-</main>
+</section></main>
 
 <!-- ==================== FOOTER ==================== -->
 <footer class="site-footer">
@@ -625,5 +458,6 @@
 </footer>
 
 <script src="js/main.js" defer></script>
+<script src="js/auth.js" defer></script>
 </body>
 </html>
