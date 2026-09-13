@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Канбан доска — CRM FLEUR</title>
+<meta name="description" content="Канбан доска заказов FLEUR: новые, в сборке, в доставке, доставленные и отменённые заказы." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="lk-page">
+<div class="lk-layout">
+    <aside class="lk-sidebar">
+      <a href="crm-kanban.html" class="lk-sidebar__logo">FLEUR</a>
+
+      <nav class="lk-nav">
+        <a href="crm-kanban.html" class="is-active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="6" height="16" rx="1"/><rect x="10.5" y="4" width="6" height="10" rx="1"/><rect x="18" y="4" width="3" height="7" rx="1"/></svg><span>Канбан доска</span></a>
+        <a href="crm-archive.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="5" rx="1"/><path d="M5 9v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9"/><path d="M10 13h4"/></svg><span>Архив заказов</span></a>
+        <div class="lk-nav__divider"></div>
+        <a href="index.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg><span>Выйти</span></a>
+      </nav>
+
+      <div class="lk-help">
+        <div class="lk-help__row">
+          <span class="lk-help__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="2.5" y="13" width="4" height="6" rx="1.5"/><rect x="17.5" y="13" width="4" height="6" rx="1.5"/><path d="M20 19v1a2 2 0 0 1-2 2h-3"/></svg></span>
+          <div>
+            <p class="lk-help__title">Нужна помощь?</p>
+            <p class="lk-help__text">Свяжитесь с нами в любое время</p>
+          </div>
+        </div>
+        <div class="lk-help__actions">
+          <a href="#" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m21 4-9 9M21 4 14 21l-4-7-7-4 18-6Z"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 20l1.1-5.5A8.5 8.5 0 1 1 21 11.5Z"/></svg></a>
+          <a href="tel:+74951204070" class="lk-help__phone">+7 (495) 120-40-70</a>
+        </div>
+      </div>
+    </aside>
+<main class="lk-content">
+    <div class="crm-page-head">
+      <h1>Канбан доска</h1>
+      <div class="crm-profile">
+        <div class="crm-profile__avatar ph ph--2 ph--round"></div>
+        <div>
+          <p class="crm-profile__name">Иванова Мария</p>
+          <p class="crm-profile__role">Сотрудник</p>
+        </div>
+        <svg class="crm-profile__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+      </div>
+    </div>
+
+    <div class="kanban-board">
+      <div class="kanban-col">
+        <div class="kanban-col__head"><span>Новые заказы</span><span class="kanban-col__count">3</span></div>
+        
+        <div class="kanban-card">
+          <div class="kanban-card__top">
+            <div class="kanban-card__media ph ph--3"></div>
+            <div>
+              <p class="kanban-card__id">#10234</p>
+              <p class="kanban-card__name">Букет «Нежность»</p>
+              <p class="kanban-card__price">2 990 ₽</p>
+            </div>
+          </div>
+          <div class="kanban-card__meta">
+            <div class="kanban-card__meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"/><path d="M14 11h4l3 3v2h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg><span>Доставка</span></div>
+            <div class="kanban-card__meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/></svg><span>Оплата на сайте</span></div>
+            <div class="badge-dot badge-dot--new">Новый заказ</div>
+          </div>
+          <button type="button" class="btn btn--outline btn--full js-view-order" data-order='{"id": "10234", "statusLabel": "Новый заказ", "statusClass": "", "name": "Букет «Нежность»", "price": "2 990 ₽", "phClass": "ph--3", "paymentStatus": "Оплачен", "paymentMethod": "Оплата на сайте", "deliveryMethod": "Доставка курьером", "addressLabel": "Адрес доставки", "address": "г. Москва, ул. Цветочная, д. 25, кв. 12", "date": "16 мая 2024, 14:00 – 16:00", "bonus": "150", "promo": "ПРОМОКОД НЕ ПРИМЕНЕН", "total": "2 990 ₽", "clientName": "Ольга Петрова", "clientPhone": "+7 (999) 123-45-67", "clientContact": "Telegram", "clientEmail": "olga.petrova@gmail.com", "registered": true}'>Смотреть заказ</button>
+        </div>
+        <div class="kanban-card">
+          <div class="kanban-card__top">
+            <div class="kanban-card__media ph ph--1"></div>
+            <div>
+              <p class="kanban-card__id">#10235</p>
+              <p class="kanban-card__name">Букет «Белые лилии»</p>
+              <p class="kanban-card__price">3 490 ₽</p>
+            </div>
+          </div>
+          <div class="kanban-card__meta">
+            <div class="kanban-card__meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="7"/><path d="M12 6v4l3 2"/><path d="M5 21c1-3 4-4 7-4s6 1 7 4"/></svg><span>Самовывоз</span></div>
+            <div class="kanban-card__meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7" width="19" height="11" rx="2"/><circle cx="12" cy="12.5" r="3"/><path d="M6 7v11M18 7v11"/></svg><span>Оплата наличными</span></div>
+            <div class="badge-dot badge-dot--new">Новый заказ</div>
+          </div>
+          <button type="button" class="btn btn--outline btn--full js-view-order" data-order='{"id": "10235", "statusLabel": "Новый заказ", "statusClass": "", "name": "Букет «Белые лилии»", "price": "3 490 ₽", "phClass": "ph--1", "paymentStatus": "Не оплачен", "paymentMethod": "Оплата наличными", "deliveryMethod": "Самовывоз", "addressLabel": "Пункт самовывоза", "address": "г. Москва, ул. Цветочная, д. 1, магазин FlowLove", "date": "17 мая 2024, 12:00 – 14:00", "bonus": "170", "promo": "ПРОМОКОД НЕ ПРИМЕНЕН", "total": "3 490 ₽", "clientName": "Мария Иванова", "clientPhone": "+7 (999) 123-45-67", "clientContact": "WhatsApp", "clientEmail": "maria.ivanova@mail.ru", "registered": true}'>Смотреть заказ</button>
+        </div>
+        <div class="kanban-card">
+          <div class="kanban-card__top">
+            <div class="kanban-card__media ph ph--2"></div>
+            <div>
+              <p class="kanban-card__id">#10240</p>
+              <p class="kanban-card__name">Букет «Весенний микс»</p>
+              <p class="kanban-card__price">2 490 ₽</p>
+            </div>
+          </div>
+          <div class="kanban-card__meta">
+            <div class="kanban-card__meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"/><path d="M14 11h4l3 3v2h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg><span>Доставка</span></div>
+            <div class="kanban-card__meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/></svg><span>Оплата на сайте</span></div>
+            <div class="badge-dot badge-dot--new">Новый заказ</div>
+          </div>
+          <button type="button" class="btn btn--outline btn--full js-view-order" data-order='{"id": "10240", "statusLabel": "Новый заказ", "statusClass": "", "name": "Букет «Весенний микс»", "price": "2 490 ₽", "phClass": "ph--2", "paymentStatus": "Оплачен", "paymentMethod": "Оплата на сайте", "deliveryMethod": "Доставка курьером", "addressLabel": "Адрес доставки", "address": "г. Москва, пр. Мира, д. 101, кв. 5", "date": "16 мая 2024, 16:00 – 18:00", "bonus": "120", "promo": "ПРОМОКОД НЕ ПРИМЕНЕН", "total": "2 490 ₽", "clientName": "Алексей Смирнов", "clientPhone": "+7 (900) 987-65-43", "clientContact": "Telegram", "clientEmail": "alexey.smirnov@mail.ru", "registered": true}'>Смотреть заказ</button>
+        </div>
+        <a href="#" class="kanban-add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span>Добавить заказ</span></a>
+      </div>
+      <div class="kanban-col">
+        <div class="kanban-col__head"><span>Заказы в сборке</span><span class="kanban-col__count">2</span></div>
+        
+        <div class="kanban-card">
+          <div class="kanban-card__top">
+            <div class="kanban-card__media ph ph--2"></div>
+            <div>
+              <p class="kanban-card__id">#10231</p>
+              <p class="kanban-card__name">Букет «Весенний микс»</p>
+              <p class="kanban-card__price">2 490 ₽</p>
+            </div>
+          </div>
+          <div class="kanban-card__meta">
+            <div class="kanban-card__meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"/><path d="M14 11h4l3 3v2h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg><span>Доставка</span></div>
+            <div class="kanban-card__meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/></svg><span>Оплата на сайте</span></div>
+            <div class="badge-dot badge-dot--progress">В сборке</div>
+          </div>
+          <button type="button" class="btn btn--outline btn--full js-view-order" data-order='{"id": "10231", "statusLabel": "В сборке", "statusClass": "status-badge--progress", "name": "Букет «Весенний микс»", "price": "2 490 ₽", "phClass": "ph--2", "paymentStatus": "Оплачен", "paymentMethod": "Оплата на сайте", "deliveryMethod": "Доставка курьером", "addressLabel": "Адрес доставки", "address": "г. Москва, ул. Цветочная, д. 1, магазин FlowLove", "date": "15 мая 2024, 14:00 – 16:00", "bonus": "120", "promo": "ПРОМОКОД НЕ ПРИМЕНЕН", "total": "2 490 ₽", "clientName": "Екатерина Захарова", "clientPhone": "+7 (905) 123-98-76", "clientContact": "Viber", "clientEmail": "ekaterina.z@mail.ru", "registered": false}'>Смотреть заказ</button>
+        </div>
+        <div class="kanban-card">
+          <div class="kanban-card__top">
+            <div class="kanban-card__media ph ph--4"></div>
+            <div>
+              <p class="kanban-card__id">#10236</p>
+              <p class="kanban-card__name">Букет «Солнечный день»</p>
+              <p class="kanban-card__price">4 390 ₽</p>
+            </div>
+          </div>
+          <div class="kanban-card__meta">
+            <div class="kanban-card__meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="7"/><path d="M12 6v4l3 2"/><path d="M5 21c1-3 4-4 7-4s6 1 7 4"/></svg><span>Самовывоз</span></div>
+            <div class="kanban-card__meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7" width="19" height="11" rx="2"/><circle cx="12" cy="12.5" r="3"/><path d="M6 7v11M18 7v11"/></svg><span>Оплата наличными</span></div>
+            <div class="badge-dot badge-dot--progress">В сборке</div>
+          </div>
+          <button type="button" class="btn btn--outline btn--full js-view-order" data-order='{"id": "10236", "statusLabel": "В сборке", "statusClass": "status-badge--progress", "name": "Букет «Солнечный день»", "price": "4 390 ₽", "phClass": "ph--4", "paymentStatus": "Не оплачен", "paymentMethod": "Оплата наличными", "deliveryMethod": "Самовывоз", "addressLabel": "Пункт самовывоза", "address": "г. Москва, ул. Цветочная, д. 1, магазин FlowLove", "date": "16 мая 2024, 12:00 – 14:00", "bonus": "220", "promo": "ПРОМОКОД НЕ ПРИМЕНЕН", "total": "4 390 ₽", "clientName": "Дмитрий Волков", "clientPhone": "+7 (903) 555-77-88", "clientContact": "WhatsApp", "clientEmail": "dmitry.volkov@mail.ru", "registered": false}'>Смотреть заказ</button>
+        </div>
+        <a href="#" class="kanban-add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span>Добавить заказ</span></a>
+      </div>
+      <div class="kanban-col">
+        <div class="kanban-col__head"><span>Заказы в доставке</span><span class="kanban-col__count">2</span></div>
+        
+        <div class="kanban-card">
+          <div class="kanban-card__top">
+            <div class="kanban-card__media ph ph--1"></div>
+            <div>
+              <p class="kanban-card__id">#10228</p>
+              <p class="kanban-card__name">Букет «Тюльпановый рай»</p>
+              <p class="kanban-card__price">2 690 ₽</p>
+            </div>
+          </div>
+          <div class="kanban-card__meta">
+            <div class="kanban-card__meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"/><path d="M14 11h4l3 3v2h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg><span>Доставка</span></div>
+            <div class="kanban-card__meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/></svg><span>Оплата на сайте</span></div>
+            <div class="badge-dot badge-dot--transit">В доставке</div>
+          </div>
+          <button type="button" class="btn btn--outline btn--full js-view-order" data-order='{"id": "10228", "statusLabel": "В доставке", "statusClass": "status-badge--transit", "name": "Букет «Тюльпановый рай»", "price": "2 690 ₽", "phClass": "ph--1", "paymentStatus": "Оплачен", "paymentMethod": "Оплата на сайте", "deliveryMethod": "Доставка курьером", "addressLabel": "Адрес доставки", "address": "г. Москва, ул. Цветочная, д. 25, кв. 12", "date": "14 мая 2024, 10:00 – 12:00", "bonus": "130", "promo": "ПРОМОКОД НЕ ПРИМЕНЕН", "total": "2 690 ₽", "clientName": "Мария Иванова", "clientPhone": "+7 (999) 123-45-67", "clientContact": "WhatsApp", "clientEmail": "maria.ivanova@mail.ru", "registered": true}'>Смотреть заказ</button>
+        </div>
+        <div class="kanban-card">
+          <div class="kanban-card__top">
+            <div class="kanban-card__media ph ph--3"></div>
+            <div>
+              <p class="kanban-card__id">#10237</p>
+              <p class="kanban-card__name">Букет «Летний сад»</p>
+              <p class="kanban-card__price">3 790 ₽</p>
+            </div>
+          </div>
+          <div class="kanban-card__meta">
+            <div class="kanban-card__meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"/><path d="M14 11h4l3 3v2h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg><span>Доставка</span></div>
+            <div class="kanban-card__meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/></svg><span>Оплата на сайте</span></div>
+            <div class="badge-dot badge-dot--transit">В доставке</div>
+          </div>
+          <button type="button" class="btn btn--outline btn--full js-view-order" data-order='{"id": "10237", "statusLabel": "В доставке", "statusClass": "status-badge--transit", "name": "Букет «Летний сад»", "price": "3 790 ₽", "phClass": "ph--3", "paymentStatus": "Оплачен", "paymentMethod": "Оплата на сайте", "deliveryMethod": "Доставка курьером", "addressLabel": "Адрес доставки", "address": "г. Москва, ул. Ленина, д. 15, кв. 8", "date": "15 мая 2024, 10:00 – 12:00", "bonus": "190", "promo": "ПРОМОКОД НЕ ПРИМЕНЕН", "total": "3 790 ₽", "clientName": "Ольга Петрова", "clientPhone": "+7 (999) 222-11-33", "clientContact": "WhatsApp", "clientEmail": "olga.petrova@mail.ru", "registered": true}'>Смотреть заказ</button>
+        </div>
+        <a href="#" class="kanban-add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span>Добавить заказ</span></a>
+      </div>
+      <div class="kanban-col">
+        <div class="kanban-col__head"><span>Доставленные заказы</span><span class="kanban-col__count">4</span></div>
+        
+        <div class="kanban-card">
+          <div class="kanban-card__top">
+            <div class="kanban-card__media ph ph--2"></div>
+            <div>
+              <p class="kanban-card__id">#10216</p>
+              <p class="kanban-card__name">Букет «Розовые мечты»</p>
+              <p class="kanban-card__price">3 490 ₽</p>
+            </div>
+          </div>
+          <div class="kanban-card__meta">
+            <div class="kanban-card__meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="7"/><path d="M12 6v4l3 2"/><path d="M5 21c1-3 4-4 7-4s6 1 7 4"/></svg><span>Самовывоз</span></div>
+            <div class="kanban-card__meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7" width="19" height="11" rx="2"/><circle cx="12" cy="12.5" r="3"/><path d="M6 7v11M18 7v11"/></svg><span>Оплата наличными</span></div>
+            <div class="badge-dot badge-dot--new">Доставлен</div>
+          </div>
+          <button type="button" class="btn btn--outline btn--full js-view-order" data-order='{"id": "10216", "statusLabel": "Доставлен", "statusClass": "", "name": "Букет «Розовые мечты»", "price": "3 490 ₽", "phClass": "ph--2", "paymentStatus": "Не оплачен", "paymentMethod": "Оплата наличными", "deliveryMethod": "Самовывоз", "addressLabel": "Пункт самовывоза", "address": "г. Москва, ул. Цветочная, д. 1, магазин FlowLove", "date": "11 мая 2024, 12:00 – 14:00", "bonus": "170", "promo": "ПРОМОКОД НЕ ПРИМЕНЕН", "total": "3 490 ₽", "clientName": "Алексей Смирнов", "clientPhone": "+7 (900) 987-65-43", "clientContact": "Telegram", "clientEmail": "alexey.smirnov@mail.ru", "registered": true}'>Смотреть заказ</button>
+        </div>
+        <div class="kanban-card">
+          <div class="kanban-card__top">
+            <div class="kanban-card__media ph ph--4"></div>
+            <div>
+              <p class="kanban-card__id">#10227</p>
+              <p class="kanban-card__name">Букет «Солнечное настроение»</p>
+              <p class="kanban-card__price">2 990 ₽</p>
+            </div>
+          </div>
+          <div class="kanban-card__meta">
+            <div class="kanban-card__meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"/><path d="M14 11h4l3 3v2h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg><span>Доставка</span></div>
+            <div class="kanban-card__meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/></svg><span>Оплата на сайте</span></div>
+            <div class="badge-dot badge-dot--new">Доставлен</div>
+          </div>
+          <button type="button" class="btn btn--outline btn--full js-view-order" data-order='{"id": "10227", "statusLabel": "Доставлен", "statusClass": "", "name": "Букет «Солнечное настроение»", "price": "2 990 ₽", "phClass": "ph--4", "paymentStatus": "Оплачен", "paymentMethod": "Оплата на сайте", "deliveryMethod": "Доставка курьером", "addressLabel": "Адрес доставки", "address": "г. Москва, ул. Садовая, д. 8, кв. 20", "date": "12 мая 2024, 14:00 – 16:00", "bonus": "150", "promo": "ПРОМОКОД НЕ ПРИМЕНЕН", "total": "2 990 ₽", "clientName": "Дмитрий Волков", "clientPhone": "+7 (903) 555-77-88", "clientContact": "WhatsApp", "clientEmail": "dmitry.volkov@mail.ru", "registered": false}'>Смотреть заказ</button>
+        </div>
+        <div class="kanban-card">
+          <div class="kanban-card__top">
+            <div class="kanban-card__media ph ph--1"></div>
+            <div>
+              <p class="kanban-card__id">#10238</p>
+              <p class="kanban-card__name">Букет «Классика»</p>
+              <p class="kanban-card__price">3 790 ₽</p>
+            </div>
+          </div>
+          <div class="kanban-card__meta">
+            <div class="kanban-card__meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="7"/><path d="M12 6v4l3 2"/><path d="M5 21c1-3 4-4 7-4s6 1 7 4"/></svg><span>Самовывоз</span></div>
+            <div class="kanban-card__meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7" width="19" height="11" rx="2"/><circle cx="12" cy="12.5" r="3"/><path d="M6 7v11M18 7v11"/></svg><span>Оплата наличными</span></div>
+            <div class="badge-dot badge-dot--new">Доставлен</div>
+          </div>
+          <button type="button" class="btn btn--outline btn--full js-view-order" data-order='{"id": "10238", "statusLabel": "Доставлен", "statusClass": "", "name": "Букет «Классика»", "price": "3 790 ₽", "phClass": "ph--1", "paymentStatus": "Не оплачен", "paymentMethod": "Оплата наличными", "deliveryMethod": "Самовывоз", "addressLabel": "Пункт самовывоза", "address": "г. Москва, ул. Цветочная, д. 1, магазин FlowLove", "date": "13 мая 2024, 16:00 – 18:00", "bonus": "190", "promo": "ПРОМОКОД НЕ ПРИМЕНЕН", "total": "3 790 ₽", "clientName": "Екатерина Захарова", "clientPhone": "+7 (905) 123-98-76", "clientContact": "Viber", "clientEmail": "ekaterina.z@mail.ru", "registered": false}'>Смотреть заказ</button>
+        </div>
+        <div class="kanban-card">
+          <div class="kanban-card__top">
+            <div class="kanban-card__media ph ph--3"></div>
+            <div>
+              <p class="kanban-card__id">#10239</p>
+              <p class="kanban-card__name">Букет «Весна в подарок»</p>
+              <p class="kanban-card__price">3 290 ₽</p>
+            </div>
+          </div>
+          <div class="kanban-card__meta">
+            <div class="kanban-card__meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"/><path d="M14 11h4l3 3v2h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg><span>Доставка</span></div>
+            <div class="kanban-card__meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/></svg><span>Оплата на сайте</span></div>
+            <div class="badge-dot badge-dot--new">Доставлен</div>
+          </div>
+          <button type="button" class="btn btn--outline btn--full js-view-order" data-order='{"id": "10239", "statusLabel": "Доставлен", "statusClass": "", "name": "Букет «Весна в подарок»", "price": "3 290 ₽", "phClass": "ph--3", "paymentStatus": "Оплачен", "paymentMethod": "Оплата на сайте", "deliveryMethod": "Доставка курьером", "addressLabel": "Адрес доставки", "address": "г. Москва, ул. Ленина, д. 15, кв. 8", "date": "13 мая 2024, 10:00 – 12:00", "bonus": "160", "promo": "ПРОМОКОД НЕ ПРИМЕНЕН", "total": "3 290 ₽", "clientName": "Ольга Петрова", "clientPhone": "+7 (999) 222-11-33", "clientContact": "WhatsApp", "clientEmail": "olga.petrova@mail.ru", "registered": true}'>Смотреть заказ</button>
+        </div>
+        <a href="#" class="kanban-add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span>Добавить заказ</span></a>
+      </div>
+      <div class="kanban-col">
+        <div class="kanban-col__head"><span>Отмененные заказы</span><span class="kanban-col__count">1</span></div>
+        
+        <div class="kanban-card">
+          <div class="kanban-card__top">
+            <div class="kanban-card__media ph ph--2"></div>
+            <div>
+              <p class="kanban-card__id">#10220</p>
+              <p class="kanban-card__name">Букет «Тюльпаны»</p>
+              <p class="kanban-card__price">2 690 ₽</p>
+            </div>
+          </div>
+          <div class="kanban-card__meta">
+            <div class="kanban-card__meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"/><path d="M14 11h4l3 3v2h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg><span>Доставка</span></div>
+            <div class="kanban-card__meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/></svg><span>Оплата на сайте</span></div>
+            <div class="badge-dot badge-dot--cancelled">Отменен</div>
+          </div>
+          <button type="button" class="btn btn--outline btn--full js-view-order" data-order='{"id": "10220", "statusLabel": "Отменен", "statusClass": "status-badge--cancelled", "name": "Букет «Тюльпаны»", "price": "2 690 ₽", "phClass": "ph--2", "paymentStatus": "Оплачен", "paymentMethod": "Оплата на сайте", "deliveryMethod": "Доставка курьером", "addressLabel": "Адрес доставки", "address": "г. Москва, ул. Цветочная, д. 25, кв. 12", "date": "10 мая 2024, 12:00 – 14:00", "bonus": "130", "promo": "ПРОМОКОД НЕ ПРИМЕНЕН", "total": "2 690 ₽", "clientName": "Мария Иванова", "clientPhone": "+7 (999) 123-45-67", "clientContact": "WhatsApp", "clientEmail": "maria.ivanova@mail.ru", "registered": true}'>Смотреть заказ</button>
+        </div>
+        <a href="#" class="kanban-add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span>Добавить заказ</span></a>
+      </div>
+    </div>
+</main></div>
+
+  <div class="modal-overlay" id="orderModal">
+    <div class="modal">
+      <div class="modal__head">
+        <div class="modal__head-title">
+          <h2 class="js-order-id">Заказ #10234</h2>
+          <span class="status-badge js-order-status">Новый заказ</span>
+        </div>
+        <button type="button" class="modal__close js-modal-close" aria-label="Закрыть"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+
+      <div class="order-modal__top">
+        <div class="order-modal__media js-order-media ph ph--1"></div>
+        <div>
+          <div class="order-modal__head-row">
+            <div>
+              <h3 class="order-modal__name js-order-name">Букет «Нежность»</h3>
+              <p class="order-modal__price js-order-price">2 990 ₽</p>
+            </div>
+            <a href="product.html" class="btn btn--outline">Посмотреть товар<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5h5v5"/><path d="M19 5 10 14"/><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></svg></a>
+          </div>
+
+          <div class="info-row">
+            <span class="info-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/></svg></span>
+            <div>
+              <p class="info-row__label">Оплата</p>
+              <p class="info-row__value"><span class="status-badge js-payment-status-text">Оплачен</span><span class="js-payment-method">Оплата на сайте</span></p>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"/><path d="M14 11h4l3 3v2h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg></span>
+            <div>
+              <p class="info-row__label">Доставка</p>
+              <p class="info-row__value js-delivery-method">Доставка курьером</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11.5A7 7 0 0 0 5 9.5C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></svg></span>
+            <div>
+              <p class="info-row__label js-address-label">Адрес доставки</p>
+              <p class="info-row__value js-address-value">г. Москва, ул. Цветочная, д. 25, кв. 12</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><circle cx="12" cy="15" r="2.6"/></svg></span>
+            <div>
+              <p class="info-row__label">Дата и время</p>
+              <p class="info-row__value js-order-date">16 мая 2024, 14:00 – 16:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-modal__stats">
+        <div class="stat-box">
+          <span class="stat-box__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="11" rx="1.5"/><path d="M3 13h18"/><path d="M12 9v11"/><path d="M12 9c-2-4-7-3-6 0 .6 1.3 3 1 6 0Zm0 0c2-4 7-3 6 0-.6 1.3-3 1-6 0Z"/></svg></span>
+          <div><p class="stat-box__label">Начислено бонусов</p><p class="stat-box__value js-bonus">+150 бонусов</p></div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-box__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5 5 19"/><circle cx="7.5" cy="7.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg></span>
+          <div><p class="stat-box__label">Скидка по промокоду</p><p class="stat-box__value js-promo">ПРОМОКОД НЕ ПРИМЕНЕН</p></div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-box__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1H8a2 2 0 0 0 0 4h13"/></svg></span>
+          <div><p class="stat-box__label">Итоговая сумма</p><p class="stat-box__value js-total">2 990 ₽</p></div>
+        </div>
+      </div>
+
+      <div class="order-modal__client">
+        <div>
+          <h3>Данные клиента</h3>
+          <div class="client-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 5-6 8-6s6.5 2 8 6"/></svg><span class="js-client-name">Ольга Петрова</span></div>
+          <div class="client-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0 8.3 6.7 15 15 15l1-3.6-4.4-1.6L14 17A11 11 0 0 1 7 10l2.2-1.6L7.6 4 4 5Z"/></svg><span class="js-client-phone">+7 (999) 123-45-67</span></div>
+          <div class="client-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H8l-4 4V4Z"/></svg><span class="js-client-contact">Telegram</span></div>
+          <div class="client-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><span class="js-client-email">olga.petrova@gmail.com</span></div>
+        </div>
+        <div class="client-status-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 5-6 8-6s6.5 2 8 6"/></svg>
+          <div>
+            <p class="client-status-box__label">Статус клиента</p>
+            <p class="client-status-box__value"><span class="js-client-status-text">Зарегистрирован на сайте</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 5-5.5"/></svg></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-modal__footer">
+        <button type="button" class="btn btn--outline js-modal-close">Закрыть</button>
+      </div>
+    </div>
+  </div>
+
+<script src="js/crm.js" defer></script>
+</body>
+</html>

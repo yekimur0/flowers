@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Архив заказов — CRM FLEUR</title>
+<meta name="description" content="Архив заказов FLEUR с фильтрами по периоду и статусу." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="lk-page">
+<div class="lk-layout">
+    <aside class="lk-sidebar">
+      <a href="crm-kanban.html" class="lk-sidebar__logo">FLEUR</a>
+
+      <nav class="lk-nav">
+        <a href="crm-kanban.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="6" height="16" rx="1"/><rect x="10.5" y="4" width="6" height="10" rx="1"/><rect x="18" y="4" width="3" height="7" rx="1"/></svg><span>Канбан доска</span></a>
+        <a href="crm-archive.html" class="is-active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="5" rx="1"/><path d="M5 9v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9"/><path d="M10 13h4"/></svg><span>Архив заказов</span></a>
+        <div class="lk-nav__divider"></div>
+        <a href="index.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg><span>Выйти</span></a>
+      </nav>
+
+      <div class="lk-help">
+        <div class="lk-help__row">
+          <span class="lk-help__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="2.5" y="13" width="4" height="6" rx="1.5"/><rect x="17.5" y="13" width="4" height="6" rx="1.5"/><path d="M20 19v1a2 2 0 0 1-2 2h-3"/></svg></span>
+          <div>
+            <p class="lk-help__title">Нужна помощь?</p>
+            <p class="lk-help__text">Свяжитесь с нами в любое время</p>
+          </div>
+        </div>
+        <div class="lk-help__actions">
+          <a href="#" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m21 4-9 9M21 4 14 21l-4-7-7-4 18-6Z"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 20l1.1-5.5A8.5 8.5 0 1 1 21 11.5Z"/></svg></a>
+          <a href="tel:+74951204070" class="lk-help__phone">+7 (495) 120-40-70</a>
+        </div>
+      </div>
+    </aside>
+<main class="lk-content">
+    <div class="crm-page-head">
+      <h1>Архив заказов</h1>
+      <div class="crm-profile">
+        <div class="crm-profile__avatar ph ph--2 ph--round"></div>
+        <div>
+          <p class="crm-profile__name">Иванова Мария</p>
+          <p class="crm-profile__role">Сотрудник</p>
+        </div>
+        <svg class="crm-profile__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+      </div>
+    </div>
+
+    <div class="archive-filters">
+      <div>
+        <label class="field-label" for="archivePeriod">Период заказа</label>
+        <div style="position:relative;">
+          <input class="field select-field" id="archivePeriod" style="background-image:none;" type="text" value="01.05.2024 — 31.05.2024" readonly>
+          <svg class="field-decor-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+        </div>
+      </div>
+      <div>
+        <label class="field-label" for="archiveStatus">Статус заказа</label>
+        <select class="select-field" id="archiveStatus">
+          <option>Все</option>
+          <option>Доставленные</option>
+          <option>Отменённые</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="archive-list">
+      <div class="archive-card">
+        <div class="archive-card__media ph ph--3"></div>
+        <div>
+          <div class="archive-card__title"><span>Заказ #10220</span><span class="status-badge ">Доставленный</span></div>
+          <p class="archive-card__name">Букет «Солнечный день»</p>
+          <p class="archive-card__price">4 190 ₽</p>
+          <div class="archive-card__meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"/><path d="M14 11h4l3 3v2h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg> Доставка</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/></svg> Оплата на сайте<i class="dot dot--green"></i></span>
+          </div>
+        </div>
+        <div class="archive-card__block">
+          <p class="archive-card__block-label">Клиент</p>
+          <p class="archive-card__block-row archive-card__block-row--name">Мария Иванова</p>
+          <p class="archive-card__block-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0 8.3 6.7 15 15 15l1-3.6-4.4-1.6L14 17A11 11 0 0 1 7 10l2.2-1.6L7.6 4 4 5Z"/></svg> +7 (999) 123-45-67</p>
+          <p class="archive-card__block-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 20l1.1-5.5A8.5 8.5 0 1 1 21 11.5Z"/></svg> WhatsApp</p>
+          <p class="archive-card__block-row">maria.ivanova@mail.ru</p>
+        </div>
+        <div class="archive-card__dates">
+          <p class="archive-card__block-label">Адрес доставки</p>
+          <div class="archive-card__date-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11.5A7 7 0 0 0 5 9.5C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></svg><div>г. Москва, ул. Цветочная, д. 25, кв. 12</div></div>
+          
+          <div class="archive-card__date-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><div><span>Дата заказа</span><strong>15 мая 2024, 10:30</strong></div></div>
+          <div class="archive-card__date-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"/><path d="M14 11h4l3 3v2h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg><div><span>Дата доставки</span><strong>16 мая 2024, 14:00 – 16:00</strong></div></div>
+        </div>
+        <div class="archive-card__action"><button type="button" class="btn btn--outline js-view-order" data-order='{"id": "10220", "statusLabel": "Доставленный", "statusClass": "", "name": "Букет «Солнечный день»", "price": "4 190 ₽", "phClass": "ph--3", "paymentStatus": "Оплачен", "paymentMethod": "Оплата на сайте", "deliveryMethod": "Доставка курьером", "addressLabel": "Адрес доставки", "address": "г. Москва, ул. Цветочная, д. 25, кв. 12", "date": "16 мая 2024, 14:00 – 16:00", "bonus": "210", "promo": "ПРОМОКОД НЕ ПРИМЕНЕН", "total": "4 190 ₽", "clientName": "Мария Иванова", "clientPhone": "+7 (999) 123-45-67", "clientContact": "WhatsApp", "clientEmail": "maria.ivanova@mail.ru", "registered": true}'>Посмотреть заказ</button></div>
+      </div>
+      <div class="archive-card">
+        <div class="archive-card__media ph ph--1"></div>
+        <div>
+          <div class="archive-card__title"><span>Заказ #10218</span><span class="status-badge ">Доставленный</span></div>
+          <p class="archive-card__name">Букет «Белые лилии»</p>
+          <p class="archive-card__price">3 490 ₽</p>
+          <div class="archive-card__meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"/><path d="M14 11h4l3 3v2h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg> Доставка</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7" width="19" height="11" rx="2"/><circle cx="12" cy="12.5" r="3"/><path d="M6 7v11M18 7v11"/></svg> Оплата наличными<i class="dot dot--green"></i></span>
+          </div>
+        </div>
+        <div class="archive-card__block">
+          <p class="archive-card__block-label">Клиент</p>
+          <p class="archive-card__block-row archive-card__block-row--name">Алексей Смирнов</p>
+          <p class="archive-card__block-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0 8.3 6.7 15 15 15l1-3.6-4.4-1.6L14 17A11 11 0 0 1 7 10l2.2-1.6L7.6 4 4 5Z"/></svg> +7 (900) 987-65-43</p>
+          <p class="archive-card__block-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m21 4-9 9M21 4 14 21l-4-7-7-4 18-6Z"/></svg> Telegram</p>
+          <p class="archive-card__block-row">alexey.smirnov@mail.ru</p>
+        </div>
+        <div class="archive-card__dates">
+          <p class="archive-card__block-label">Адрес доставки</p>
+          <div class="archive-card__date-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11.5A7 7 0 0 0 5 9.5C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></svg><div>г. Москва, пр. Мира, д. 101, кв. 5</div></div>
+          
+          <div class="archive-card__date-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><div><span>Дата заказа</span><strong>12 мая 2024, 09:15</strong></div></div>
+          <div class="archive-card__date-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"/><path d="M14 11h4l3 3v2h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg><div><span>Дата доставки</span><strong>12 мая 2024, 18:00 – 20:00</strong></div></div>
+        </div>
+        <div class="archive-card__action"><button type="button" class="btn btn--outline js-view-order" data-order='{"id": "10218", "statusLabel": "Доставленный", "statusClass": "", "name": "Букет «Белые лилии»", "price": "3 490 ₽", "phClass": "ph--1", "paymentStatus": "Не оплачен", "paymentMethod": "Оплата наличными", "deliveryMethod": "Доставка курьером", "addressLabel": "Адрес доставки", "address": "г. Москва, пр. Мира, д. 101, кв. 5", "date": "12 мая 2024, 18:00 – 20:00", "bonus": "170", "promo": "ПРОМОКОД НЕ ПРИМЕНЕН", "total": "3 490 ₽", "clientName": "Алексей Смирнов", "clientPhone": "+7 (900) 987-65-43", "clientContact": "Telegram", "clientEmail": "alexey.smirnov@mail.ru", "registered": true}'>Посмотреть заказ</button></div>
+      </div>
+      <div class="archive-card">
+        <div class="archive-card__media ph ph--2"></div>
+        <div>
+          <div class="archive-card__title"><span>Заказ #10215</span><span class="status-badge status-badge--cancelled">Отмененный</span></div>
+          <p class="archive-card__name">Букет «Тюльпановый рай»</p>
+          <p class="archive-card__price">2 690 ₽</p>
+          <div class="archive-card__meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="7"/><path d="M12 6v4l3 2"/><path d="M5 21c1-3 4-4 7-4s6 1 7 4"/></svg> Самовывоз</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/></svg> Оплата на сайте<i class="dot dot--red"></i></span>
+          </div>
+        </div>
+        <div class="archive-card__block">
+          <p class="archive-card__block-label">Клиент</p>
+          <p class="archive-card__block-row archive-card__block-row--name">Екатерина Захарова</p>
+          <p class="archive-card__block-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0 8.3 6.7 15 15 15l1-3.6-4.4-1.6L14 17A11 11 0 0 1 7 10l2.2-1.6L7.6 4 4 5Z"/></svg> +7 (905) 123-98-76</p>
+          <p class="archive-card__block-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12.5c0 4.1-3.6 7.5-8 7.5-1 0-2-.2-2.9-.5L4 20l1-3.8A7.6 7.6 0 0 1 4 12.5C4 8.4 7.6 5 12 5s8 3.4 8 7.5Z"/><path d="M9 12V9.5M12 12.5V9M15 12V9.5"/></svg> Viber</p>
+          <p class="archive-card__block-row">ekaterina.z@mail.ru</p>
+        </div>
+        <div class="archive-card__dates">
+          <p class="archive-card__block-label">Пункт самовывоза</p>
+          <div class="archive-card__date-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11.5A7 7 0 0 0 5 9.5C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></svg><div>г. Москва, ул. Цветочная, д. 1, магазин FlowLove</div></div>
+          
+          <div class="archive-card__date-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><div><span>Дата заказа</span><strong>10 мая 2024, 16:45</strong></div></div>
+          <div class="archive-card__date-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><div><span>Дата самовывоза</span><strong>11 мая 2024, 12:00 – 14:00</strong></div></div>
+        </div>
+        <div class="archive-card__action"><button type="button" class="btn btn--outline js-view-order" data-order='{"id": "10215", "statusLabel": "Отмененный", "statusClass": "status-badge--cancelled", "name": "Букет «Тюльпановый рай»", "price": "2 690 ₽", "phClass": "ph--2", "paymentStatus": "Оплачен", "paymentMethod": "Оплата на сайте", "deliveryMethod": "Самовывоз", "addressLabel": "Пункт самовывоза", "address": "г. Москва, ул. Цветочная, д. 1, магазин FlowLove", "date": "11 мая 2024, 12:00 – 14:00", "bonus": "130", "promo": "ПРОМОКОД НЕ ПРИМЕНЕН", "total": "2 690 ₽", "clientName": "Екатерина Захарова", "clientPhone": "+7 (905) 123-98-76", "clientContact": "Viber", "clientEmail": "ekaterina.z@mail.ru", "registered": false}'>Посмотреть заказ</button></div>
+      </div>
+      <div class="archive-card">
+        <div class="archive-card__media ph ph--4"></div>
+        <div>
+          <div class="archive-card__title"><span>Заказ #10212</span><span class="status-badge status-badge--cancelled">Отмененный</span></div>
+          <p class="archive-card__name">Букет «Весенний микс»</p>
+          <p class="archive-card__price">2 490 ₽</p>
+          <div class="archive-card__meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"/><path d="M14 11h4l3 3v2h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg> Доставка</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7" width="19" height="11" rx="2"/><circle cx="12" cy="12.5" r="3"/><path d="M6 7v11M18 7v11"/></svg> Оплата наличными<i class="dot dot--red"></i></span>
+          </div>
+        </div>
+        <div class="archive-card__block">
+          <p class="archive-card__block-label">Клиент</p>
+          <p class="archive-card__block-row archive-card__block-row--name">Ольга Петрова</p>
+          <p class="archive-card__block-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0 8.3 6.7 15 15 15l1-3.6-4.4-1.6L14 17A11 11 0 0 1 7 10l2.2-1.6L7.6 4 4 5Z"/></svg> +7 (999) 222-11-33</p>
+          <p class="archive-card__block-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 20l1.1-5.5A8.5 8.5 0 1 1 21 11.5Z"/></svg> WhatsApp</p>
+          <p class="archive-card__block-row">olga.petrova@mail.ru</p>
+        </div>
+        <div class="archive-card__dates">
+          <p class="archive-card__block-label">Адрес доставки</p>
+          <div class="archive-card__date-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11.5A7 7 0 0 0 5 9.5C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></svg><div>г. Москва, ул. Ленина, д. 15, кв. 8</div></div>
+          
+          <div class="archive-card__date-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><div><span>Дата заказа</span><strong>8 мая 2024, 11:20</strong></div></div>
+          <div class="archive-card__date-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"/><path d="M14 11h4l3 3v2h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg><div><span>Дата доставки</span><strong>9 мая 2024, 10:00 – 12:00</strong></div></div>
+        </div>
+        <div class="archive-card__action"><button type="button" class="btn btn--outline js-view-order" data-order='{"id": "10212", "statusLabel": "Отмененный", "statusClass": "status-badge--cancelled", "name": "Букет «Весенний микс»", "price": "2 490 ₽", "phClass": "ph--4", "paymentStatus": "Не оплачен", "paymentMethod": "Оплата наличными", "deliveryMethod": "Доставка курьером", "addressLabel": "Адрес доставки", "address": "г. Москва, ул. Ленина, д. 15, кв. 8", "date": "9 мая 2024, 10:00 – 12:00", "bonus": "120", "promo": "ПРОМОКОД НЕ ПРИМЕНЕН", "total": "2 490 ₽", "clientName": "Ольга Петрова", "clientPhone": "+7 (999) 222-11-33", "clientContact": "WhatsApp", "clientEmail": "olga.petrova@mail.ru", "registered": true}'>Посмотреть заказ</button></div>
+      </div>
+    </div>
+    <div class="archive-footer">
+      <p class="archive-footer__count">Показано 1–4 из 23 заказов</p>
+      <button class="btn btn--outline" type="button">Загрузить ещё</button>
+    </div>
+</main></div>
+
+  <div class="modal-overlay" id="orderModal">
+    <div class="modal">
+      <div class="modal__head">
+        <div class="modal__head-title">
+          <h2 class="js-order-id">Заказ #10234</h2>
+          <span class="status-badge js-order-status">Новый заказ</span>
+        </div>
+        <button type="button" class="modal__close js-modal-close" aria-label="Закрыть"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+
+      <div class="order-modal__top">
+        <div class="order-modal__media js-order-media ph ph--1"></div>
+        <div>
+          <div class="order-modal__head-row">
+            <div>
+              <h3 class="order-modal__name js-order-name">Букет «Нежность»</h3>
+              <p class="order-modal__price js-order-price">2 990 ₽</p>
+            </div>
+            <a href="product.html" class="btn btn--outline">Посмотреть товар<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5h5v5"/><path d="M19 5 10 14"/><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></svg></a>
+          </div>
+
+          <div class="info-row">
+            <span class="info-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/></svg></span>
+            <div>
+              <p class="info-row__label">Оплата</p>
+              <p class="info-row__value"><span class="status-badge js-payment-status-text">Оплачен</span><span class="js-payment-method">Оплата на сайте</span></p>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"/><path d="M14 11h4l3 3v2h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg></span>
+            <div>
+              <p class="info-row__label">Доставка</p>
+              <p class="info-row__value js-delivery-method">Доставка курьером</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11.5A7 7 0 0 0 5 9.5C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></svg></span>
+            <div>
+              <p class="info-row__label js-address-label">Адрес доставки</p>
+              <p class="info-row__value js-address-value">г. Москва, ул. Цветочная, д. 25, кв. 12</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><circle cx="12" cy="15" r="2.6"/></svg></span>
+            <div>
+              <p class="info-row__label">Дата и время</p>
+              <p class="info-row__value js-order-date">16 мая 2024, 14:00 – 16:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-modal__stats">
+        <div class="stat-box">
+          <span class="stat-box__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="11" rx="1.5"/><path d="M3 13h18"/><path d="M12 9v11"/><path d="M12 9c-2-4-7-3-6 0 .6 1.3 3 1 6 0Zm0 0c2-4 7-3 6 0-.6 1.3-3 1-6 0Z"/></svg></span>
+          <div><p class="stat-box__label">Начислено бонусов</p><p class="stat-box__value js-bonus">+150 бонусов</p></div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-box__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5 5 19"/><circle cx="7.5" cy="7.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg></span>
+          <div><p class="stat-box__label">Скидка по промокоду</p><p class="stat-box__value js-promo">ПРОМОКОД НЕ ПРИМЕНЕН</p></div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-box__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1H8a2 2 0 0 0 0 4h13"/></svg></span>
+          <div><p class="stat-box__label">Итоговая сумма</p><p class="stat-box__value js-total">2 990 ₽</p></div>
+        </div>
+      </div>
+
+      <div class="order-modal__client">
+        <div>
+          <h3>Данные клиента</h3>
+          <div class="client-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 5-6 8-6s6.5 2 8 6"/></svg><span class="js-client-name">Ольга Петрова</span></div>
+          <div class="client-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0 8.3 6.7 15 15 15l1-3.6-4.4-1.6L14 17A11 11 0 0 1 7 10l2.2-1.6L7.6 4 4 5Z"/></svg><span class="js-client-phone">+7 (999) 123-45-67</span></div>
+          <div class="client-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H8l-4 4V4Z"/></svg><span class="js-client-contact">Telegram</span></div>
+          <div class="client-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><span class="js-client-email">olga.petrova@gmail.com</span></div>
+        </div>
+        <div class="client-status-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 5-6 8-6s6.5 2 8 6"/></svg>
+          <div>
+            <p class="client-status-box__label">Статус клиента</p>
+            <p class="client-status-box__value"><span class="js-client-status-text">Зарегистрирован на сайте</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 5-5.5"/></svg></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-modal__footer">
+        <button type="button" class="btn btn--outline js-modal-close">Закрыть</button>
+      </div>
+    </div>
+  </div>
+
+<script src="js/crm.js" defer></script>
+</body>
+</html>
